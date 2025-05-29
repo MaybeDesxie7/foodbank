@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FoodBank Help | Free Groceries for You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --agri-green: #4CAF50;
+      --agri-green-dark: #388E3C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    header img {
+      height: 100px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    .slider {
+      width: 100%;
+      max-width: 600px;
+      height: 180px;
+      margin: 0 auto 20px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+      color: var(--agri-green-dark);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+      line-height: 1.5;
+    }
+
+    .cta-btn {
+      background-color: var(--agri-green);
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--agri-green-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: var(--agri-green);
+      color: white;
+    }
+
+    footer .powered {
+      font-size: 0.85rem;
+      color: #e8e8e8;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/1000968955-removebg-preview.png" alt="FoodBank Assist Logo" />
+  </header>
+
+  <!-- Hero Section with Fading Slider -->
+  <section class="hero">
+    <div class="slider">
+      <img src="images/happy grocery GIF by Justin Timberlake.gif" class="active" alt="Groceries 1" />
+      <img src="images/pexels-cottonbro-6591147.jpg" alt="Groceries 2" />
+      <img src="images/Non Profit Charity GIF.gif" alt="Family Food Help" />
+      <img src="images/pexels-rdne-6647116.jpg" alt="Healthy Meals" />
+    </div>
+
+    <h1>Get Free Groceries — You Deserve It</h1>
+    <p>Smart people use every advantage. This program gives you access to free groceries, fast and hassle-free. No fees. No catch. Just what’s yours.</p>
+
+    <a class="cta-btn" href="https://www.hiphi.site/2L41HP4T/94W2BQS/" target="_blank">Apply Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>© 2025 Free Food-Groceries - All Rights Reserved</div>
+    <div class="powered">Powered by USA Assistance</div>
+  </footer>
+
+  <!-- Fade Slider Script -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    let current = 0;
+
+    function fadeSlide() {
+      slides.forEach((img, index) => {
+        img.classList.remove('active');
+      });
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(fadeSlide, 4000); // change every 4 seconds
+  </script>
+
+</body>
+</html>
